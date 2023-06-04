@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/bottom.css" />
+    <link rel="stylesheet" href="styles/container.css" /> 
+    <title>Spotify Clone</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="icons/logo.png" alt="logo" />
+      </div>
+      <div class="sidebar-top">
+        <ul>
+          <li><img src="icons/home.png" alt="" />Home</li>
+          <li><img src="icons/search.png" alt="" />Search</li>
+          <li><img src="icons/library.png" alt="" />Your Library</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-mid">
+        <ul>
+          <li><img src="icons/create.png" alt="" />Create Playlist</li>
+          <li>
+            <img class="icon-liked-songs" src="icons/like.png" alt="" />Liked
+            Songs
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-bottom"></div>
+    </div>
+
+    <!-- Container has all songs -->
+    <div class="container">
+      <div class="title-bar">
+        <img src="covers/playlist_cover.JPG" alt="">
+        <span>Playlist</span>
+        <h1>Favzz</h1>
+        <span><bold>Karan . 50 songs</bold>, about 3 hr 30 min</span>
+      </div>
+      <div class="songlist">
+        <div class="songlist-header"></div>
+        <ol>
+          <li>Tum hi ho</li>
+          <li>Tere Binaa</li>
+          <li>Tujhe Bhula Diya</li>
+          <li>Attention</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Bottom contains the player controls -->
+    <div class="bottom">
+      <div class="bottom-left">
+
+          <div class="poster"><img src="covers/Song-1.jpg" alt="" srcset=""></div>
+          <div class="song">
+            <span class="song-name">Tum Ho</span>
+            <span class="artist-name">Mohit Chauhan</span>
+          </div>
+          <div class="heart"><img src="icons/heart.png"></div>
+
+      </div>
+      <div class="bottom-mid">
+        <div class="control-buttons">
+          <button class="prev"><img src="icons/previous.png" alt="" srcset=""></button>
+          <button class="play"><img src="icons/play.png" alt="" srcset=""></button>
+          <button class="next"><img src="icons/next.png" alt="" srcset=""></button>
+        </div>
+        <div class="scroll-bar">
+          <input type="range">
+        </div>
+      </div>
+      <div class="bottom-right">
+        <button class="mute"><img src="icons/speaker.png" alt="" srcset=""></button>
+        <input type="range" class="volumebar">
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

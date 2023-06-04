@@ -1,0 +1,7 @@
+.container{
+  display: flex;
+}
+.title-bar img{
+    width: 192px;
+    bottom: 0
+}
