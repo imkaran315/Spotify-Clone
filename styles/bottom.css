@@ -3,7 +3,7 @@
   justify-content: center;
   vertical-align: center;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 90px;
   width: 100%;

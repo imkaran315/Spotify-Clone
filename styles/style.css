@@ -1,27 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500&family=Hind:wght@300;400;500;600;700&family=Mr+Dafoe&family=Roboto:wght@400;500;700&display=swap');
+
 
 body {
   margin: 0;
   padding: 0;
   font-family: Varela Round, Roboto;
-  background-color: rgb(62, 63, 62);
+  background-color: black;
+  
 }
 
-
-.container{
-  margin-left:209px;
-  margin-bottom:90px;
-}
-
-.title-bar{
-  background-color: rgb(98,90,175);
-  height: 340px;
-  width:100%;
-}
-
-.songlist{
-  background-color: #303030;
-}
-.songlist-header{
-  background-color:  rgba(99, 61, 157, 0.89);
-}

@@ -1,7 +1,158 @@
 .container{
+  margin-left:209px;
+  margin-bottom:90px;
+}
+.song-cover-container{
+  
+}
+.title-bar{
+  background-color: rgb(98,90,175);
+  height: 340px;
+  width:100%;
   display: flex;
+  flex-direction: row;
+  box-shadow: inset  0px -40px 400px rgba(0, 0, 0, 0.529);
 }
-.title-bar img{
-    width: 192px;
-    bottom: 0
+.song-cover-container img{
+ 
+    width: 240px;
+    margin: 80px 20px 20px 20px;
+    box-shadow:10px 10px 30px 30px rgba(0, 0, 0, 0.144) ;
 }
+
+.song-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  color: white; 
+}
+
+.song-details h1{
+  font-family: "Geologica", sans-serif;
+  font-weight: 900;
+  font-size:96px;
+  margin: 10px 0 12px 0;
+}
+
+.song-details span{
+  font-family:"Geologica", sans-serif;
+  
+  font-size: 14px;
+}
+
+
+.play-all{
+   
+   padding: 24px;
+   display:flex;
+   background:  rgb(59, 54, 103);
+   
+}
+
+.play-all button{
+  width: 55.99px;
+  height: 55.99px;
+  border-radius:30px;
+  background-color: #1ED760;
+  border-width: 0px;
+
+  cursor:pointer;
+  
+}
+
+.play-all img{
+  width: 28px;
+  height: 28px;
+  background-color: #1ED760;
+  margin-left:4px;
+  margin-top: 2px;
+  
+}
+
+.songlist{
+   background: linear-gradient(to bottom,rgba(98, 90, 175,0.45) 5%, black 30%  ); /* gradient in songslist section */
+
+  color: rgb(192, 190, 190);
+  padding: 0 16px;
+  font-family: "Geologica", sans-serif;
+}
+
+.songlist-header{
+  height: 36px;
+
+  font-size: 14px;
+  font-family: "Geologica", sans-serif;
+  font-weight:100;
+
+  background-color: rgba(72, 72, 72, 0.0);
+  border-bottom:  0.4px solid grey;
+
+  display: grid;
+  grid-template-columns: 16px 6fr 4fr 3fr minmax(120px,1fr);
+  column-gap: 16px;
+  align-items: center;
+
+  padding:2px 16px;
+  color: rgba(255, 255, 255, 0.701);
+ 
+
+  position: sticky;
+  top:0;
+  z-index: 2;
+  
+}
+
+.songlist-header :before{
+  background-color:grey;
+}
+
+
+
+.songs{
+  display: grid;
+  grid-template-columns: 16px 6fr 4fr 3fr minmax(120px,1fr);
+  column-gap: 16px;
+  align-items: center;
+  padding: 0 16px;
+
+  border:0 solid transparent;
+  position: relative;
+
+  font-size: 14px;
+}
+
+.song-title {
+  display:flex;
+  padding:10px 0;
+}
+.song-thumbnail{
+  display: flex;
+ align-items: center;
+}
+
+.song-thumbnail img{
+  width: 40px;
+  padding-right: 16px;
+}
+
+.song-name-artist{
+  display:flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.song-name{
+  font-size:16px;
+  margin: 0;
+  margin-bottom:4px;
+}
+
+.song-artist{
+  font-size:14px;
+  
+}
+
+
+
