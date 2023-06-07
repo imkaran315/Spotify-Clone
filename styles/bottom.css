@@ -75,7 +75,7 @@
 
 }
 
-.song{
+.bottom-song{
   flex:1;
   max-width: fit-content;
   padding:  0 16px;
@@ -83,12 +83,12 @@
   color:white;
 }
 
-.song-name{
+.bottom-song-name{
   margin: 6px 0;
   display: block;
 }
 
-.artist-name{
+.bottom-artist-name{
   font-size: 10px;
   color: rgb(206, 206, 206);
 }

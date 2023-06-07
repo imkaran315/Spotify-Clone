@@ -109,10 +109,11 @@
 
 
 
-.songs{
+.song{
   display: grid;
   grid-template-columns: 16px 6fr 4fr 3fr minmax(120px,1fr);
   column-gap: 16px;
+  row-gap: 3px;
   align-items: center;
   padding: 0 16px;
 
@@ -120,11 +121,14 @@
   position: relative;
 
   font-size: 14px;
+  
+
+  
 }
 
 .song-title {
   display:flex;
-  padding:10px 0;
+  padding:6px 0;
 }
 .song-thumbnail{
   display: flex;
@@ -133,26 +137,35 @@
 
 .song-thumbnail img{
   width: 40px;
+  height: 40px;
   padding-right: 16px;
+  
 }
 
 .song-name-artist{
   display:flex;
   flex-direction: column;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.song-name{
-  font-size:16px;
-  margin: 0;
-  margin-bottom:4px;
-}
-
-.song-artist{
-  font-size:14px;
+ 
+ 
   
 }
 
+.song-name{
+  font-size:15px;
+  margin: 0;
+  margin-bottom:4px;
+
+}
+
+.song-artist{
+  font-size:13px;
+
+
+}
+
+.song:hover{
+  background-color:rgba(104, 104, 104, 0.719);
+  border-radius: 4px;
+}
 
 
