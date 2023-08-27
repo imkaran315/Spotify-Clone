@@ -70,51 +70,55 @@ let songs = [
 //Initializing the variables
 
 let songIndex = 0;
+let TotalSongs = 10;
 let audioElement = new Audio(songs[songIndex].filePath);
 let playButton = document.getElementById('playButton');
 let progressBar = document.getElementById('progressBar');
+let volumeBar = document.getElementById('volumebar');
 
+//Event Listeners
+
+playButton.addEventListener('click', () => playPause());
+nextButton.addEventListener('click', () => nextSong());
+prevButton.addEventListener('click', () => prevSong());
+audioElement.addEventListener('timeupdate', () => updateSeekBar());
+progressBar.addEventListener('change', () => updateCurrentTime());
+volumeBar.addEventListener('change', () => updateVolume());
 
 // Handle play/pause
 
-playPause(){
-    
-    playButton.addEventListener('click', () => {
-        // when audio is not playing
-    
-        let playButtonImg = document.getElementById('playButton-img');
-    
-        if (audioElement.paused || audioElement.currentTime == 0) {
-            audioElement.play();
-            playButtonImg.src = "icons/pause.png";
-        }
-        else {
-            audioElement.pause();
-            playButtonImg.src = "icons/play.png";
-        }
-    
-    })
+function playPause(){
+    // when audio is not playing
+
+    let playButtonImg = document.getElementById('playButton-img');
+
+    if (audioElement.paused || audioElement.currentTime == 0) {
+        audioElement.play();
+        playButtonImg.src = "icons/pause.png";
+    }
+    else {
+        audioElement.pause();
+        playButtonImg.src = "icons/play.png";
+    }
+
 }
+
 
 // Handle Prev/Next
 
-nextButton.addEventListener('click', ()=>{
+
+
+function nextSong(){
 
     audioElement.pause()
-
-    if(songIndex + 1 <= 9){
-        songIndex++;
-    }
-    else{
-        songIndex = 0
-    }
+    songIndex = songIndex + 1 <= TotalSongs - 1 ? songIndex + 1 : 0;
 
     audioElement = new Audio(songs[songIndex].filePath);
-    audioElement.play()
+    playPause();
     updateSeekBar();
- })
+ }
 
-prevButton.addEventListener('click', ()=>{
+function prevSong(){
 
     audioElement.pause()
 
@@ -126,25 +130,30 @@ prevButton.addEventListener('click', ()=>{
     }
 
     audioElement = new Audio(songs[songIndex].filePath);
-    audioElement.play()
-    updateSeekBar();
- })
+    playPause();
+    updateSeekBar()
+ }
 
 
     
 // progressBar
 
 function updateSeekBar(){
-    // Update seek bar
-    audioElement.addEventListener('timeupdate', () => {
-        let progress = parseFloat((audioElement.currentTime / audioElement.duration) * 100);
-        progressBar.value = progress;
-    })
+    progressBar.value =  parseInt((audioElement.currentTime / audioElement.duration) * 1000);
+    
 }
 
-progressBar.addEventListener('change', () => {
+function updateCurrentTime(){
     // update audio on changing seek bar
-
     audioElement.currentTime = progressBar.value / 100 * audioElement.duration;
+}
 
-})
+//volume bar
+
+
+
+function updateVolume(){
+    audioElement.volume = volumeBar.value /100;
+}
+
+
