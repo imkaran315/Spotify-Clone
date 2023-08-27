@@ -66,7 +66,7 @@
 
         <div class="songs">
           <!-- Song-1 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(0)" onclick="playSelectedSong(0)">
             <div class="song-number">1</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -83,7 +83,7 @@
           </div>
            
           <!-- Song2 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(1)" onclick="playSelectedSong(1)">
             <div class="song-number">2</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -100,7 +100,7 @@
 
           </div>
           <!-- Song3 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(3)" onclick="playSelectedSong(1)">
             <div class="song-number">3</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -117,11 +117,11 @@
           </div>
 
           <!-- Song4 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(3)">
             <div class="song-number">4</div>
           <div class="song-title">
             <div class="song-thumbnail">
-              <img src="covers/Song-4.png">
+              <img src="covers/Song-4.jpg">
             </div>
             <div class="song-name-artist">
               <div class="song-name">Attention</div>
@@ -134,7 +134,7 @@
           </div>
 
            <!-- Song5 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(4)">
             <div class="song-number">5</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -151,7 +151,7 @@
           </div>
 
           <!-- Song6 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(5)">
             <div class="song-number">6</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -168,7 +168,7 @@
 
           </div>
           <!-- Song7 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(6)">
             <div class="song-number">7</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -185,7 +185,7 @@
           </div>
 
 <!-- Song8 -->
-          <div class="song">
+          <div class= "song" onclick="playSelectedSong(7)">
             <div class="song-number">8</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -202,7 +202,7 @@
           </div>
 
 <!-- Song9 -->
-         <div class="song">
+         <div class= "song" onclick="playSelectedSong(8)">
           <div class="song-number">9</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -219,7 +219,7 @@
          </div>
 
 <!-- Song10 -->
-         <div class="song">
+         <div class= "song" onclick="playSelectedSong(9)">
           <div class="song-number">10</div>
           <div class="song-title">
             <div class="song-thumbnail">
@@ -243,14 +243,16 @@
     <div class="bottom">
       <div class="bottom-left">
 
-          <div class="poster"><img src="covers/Song-1.jpg" alt="" srcset=""></div>
+          <div class="poster"><img id="poster" src="covers/Song-1.jpg" alt="" srcset=""></div>
           <div class="bottom-song">
-            <span class="bottom-song-name">Tum Ho</span>
-            <span class="bottom-artist-name">Mohit Chauhan</span>
+            <span class="bottom-song-name" id="title">Tum Ho</span>
+            <span class="bottom-artist-name" id="artist">Mohit Chauhan</span>
           </div>
           <div class="heart"><img src="icons/heart.png"></div>
 
       </div>
+
+
       <div class="bottom-mid">
         <div class="control-buttons">
           <button class="prev" id="prevButton"><img src="icons/previous.png" alt="" srcset=""></button> 
@@ -258,9 +260,13 @@
           <button class="next" id="nextButton"><img src="icons/next.png" alt="" srcset=""></button>
         </div>
         <div class="scroll-bar">
+          <span id="songPassed">00:00</span>
           <input type="range" id="progressBar" value="0" min="0" max="1000">
+          <span id="songDuration">00:00</span>
         </div>
       </div>
+
+
       <div class="bottom-right">
         <button class="mute"><img src="icons/speaker.png" alt="" srcset=""></button>
         <input  type="range" class="volumebar" id="volumebar" min="0.0" value= "100.0" max="100.0">

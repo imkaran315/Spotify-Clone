@@ -44,18 +44,9 @@
 }
 .play img {
   background-color: white !important;
+  image-resolution: 10px x 10px;
 }
 
-.pause {
-  background: white !important;
-  border: 0 solid;
-  border-radius: 20px;
-  width: 33px;
-  padding: 5px;
-}
-.pause img {
-  background-color: white !important;
-}
 
 
 .prev img,
@@ -63,6 +54,16 @@
   height: 15px;
 }
 
+.scroll-bar{
+  display: flex;
+  align-items: center;
+  
+}
+.scroll-bar span{
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  color:rgb(206, 206, 206);
+}
 .scroll-bar input{
   accent-color: white ;
   width:100%;
