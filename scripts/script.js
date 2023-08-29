@@ -105,14 +105,24 @@ audioElement.addEventListener('timeupdate', () => updateSeekBar());
 progressBar.addEventListener('change', () => updateCurrentTime());
 volumeBar.addEventListener('change', () => updateVolume());
 
-// Sets function everysecond
 
-// let myInterval = setInterval({
-//     updateSe
-// },1000)
+// Handles playing selected song
+
+function playSelectedSong(index){
+    songIndex = index;
+    clearInterval(myInterval);
+    
+    audioElement.pause();
+    audioElement = new Audio(songs[songIndex].filePath);
+    playPause(); 
+    
+    updateCover();
+    updateSongTitle();
+    updateTime();
+    updateSeekBar();
+}
 
 // Handle play/pause
-
 function playPause() {
     // when audio is not playing
 
@@ -210,25 +220,12 @@ function updateTime() {
     let songDuration = document.getElementById('songDuration');
 
     // Formatting seconds into clock time
-    songDuration.innerText = parseInt(audioElement.duration / 60)+ ":" + parseInt(audioElement.duration % 60);
+    songDuration.innerText = (String(parseInt(audioElement.duration / 60)) ?? "00")+ ":" + (String(parseInt(audioElement.duration % 60))  ?? "00");
+    
 
-    songPassed.innerHTML = parseInt(audioElement.currentTime / 60) + ":" + parseInt(audioElement.currentTime % 60);
+
+    songPassed.innerText = parseInt(audioElement.currentTime / 60)  + ":" + parseInt(audioElement.currentTime % 60);
 
 }
 
-// Handles playing selected song
-
-function playSelectedSong(index){
-    songIndex = index;
-    clearInterval(myInterval);
-    
-    audioElement.pause();
-    audioElement = new Audio(songs[songIndex].filePath);
-    playPause(); 
-    
-    updateCover();
-    updateSongTitle();
-    updateTime();
-    updateSeekBar();
-}
 
